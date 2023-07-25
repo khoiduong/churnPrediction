@@ -51,7 +51,7 @@ machine learning toolkit to do just that!
 
 ## Understanding the Datasets
 
-### Train vs. Test {#train-vs-test}
+### Train vs. Test
 
 In this competition, you'll gain access to two datasets that are samples
 of past subscriptions of a video streaming platform that contain
@@ -147,9 +147,7 @@ We choose this metric because we not only want to be able to predict
 which subscriptions will be retained, but also want a well-calibrated
 likelihood score that can be used to target interventions and support
 most accurately.
-:::
 
-::: {.cell .markdown}
 ## Import Python Modules
 
 First, import the primary modules that will be used in this project.
@@ -166,9 +164,7 @@ useful:
 -   maplotlib
 -   seaborn
 -   etc, etc
-:::
 
-::: {.cell .code execution_count="2"}
 ``` python
 # Import required packages
 
@@ -186,9 +182,7 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 %matplotlib inline
 ```
-:::
 
-::: {.cell .code execution_count="3"}
 ``` python
 # Import any other packages you may want to use
 import scipy.stats
@@ -199,209 +193,37 @@ from sklearn.compose import ColumnTransformer
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.linear_model import LogisticRegression
 ```
-:::
 
-::: {.cell .markdown}
 ## Load the Data
 
 Let\'s start by loading the dataset `train.csv` into a dataframe
 `train_df`, and `test.csv` into a dataframe `test_df` and display the
 shape of the dataframes.
-:::
 
-::: {.cell .code execution_count="4"}
 ``` python
 train_df = pd.read_csv("train.csv")
 print('train_df Shape:', train_df.shape)
 train_df.head()
 ```
 
-::: {.output .stream .stdout}
-    train_df Shape: (243787, 21)
-:::
 
-::: {.output .execute_result execution_count="4"}
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+train_df Shape: (243787, 21)
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+| AccountAge | MonthlyCharges | TotalCharges | SubscriptionType | PaymentMethod     | PaperlessBilling | ContentType | MultiDeviceAccess | DeviceRegistered | ViewingHoursPerWeek | ... | ContentDownloadsPerMonth | GenrePreference | UserRating | SupportTicketsPerMonth | Gender | WatchlistSize | ParentalControl | SubtitlesEnabled | CustomerID   | Churn |
+|------------|----------------|--------------|------------------|-------------------|------------------|-------------|-------------------|------------------|---------------------|-----|---------------------------|-----------------|------------|------------------------|--------|---------------|-----------------|------------------|--------------|-------|
+| 20         | 11.055215      | 221.104302   | Premium          | Mailed check      | No               | Both        | No                | Mobile           | 36.758104           | ... | 10                        | Sci-Fi          | 2.176498   | 4                      | Male   | 3             | No              | No               | CB6SXPNVZA   | 0     |
+| 57         | 5.175208       | 294.986882   | Basic            | Credit card       | Yes              | Movies      | No                | Tablet           | 32.450568           | ... | 18                        | Action          | 3.478632   | 8                      | Male   | 23            | No              | Yes              | S7R2G87O09   | 0     |
+| 73         | 12.106657      | 883.785952   | Basic            | Mailed check      | Yes              | Movies      | No                | Computer         | 7.395160            | ... | 23                        | Fantasy         | 4.238824   | 6                      | Male   | 1             | Yes             | Yes              | EASDC20BDT   | 0     |
+| 32         | 7.263743       | 232.439774   | Basic            | Electronic check | No               | TV Shows    | No                | Tablet           | 27.960389           | ... | 30                        | Drama           | 4.276013   | 2                      | Male   | 24            | Yes             | Yes              | NPF69NT69N   | 0     |
+| 57         | 16.953078      | 966.325422   | Premium          | Electronic check | Yes              | TV Shows    | No                | TV               | 20.083397           | ... | 20                        | Comedy          | 3.616170   | 4                      | Female | 0             | No              | No               | 4LGYPK7VOL   | 0     |
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AccountAge</th>
-      <th>MonthlyCharges</th>
-      <th>TotalCharges</th>
-      <th>SubscriptionType</th>
-      <th>PaymentMethod</th>
-      <th>PaperlessBilling</th>
-      <th>ContentType</th>
-      <th>MultiDeviceAccess</th>
-      <th>DeviceRegistered</th>
-      <th>ViewingHoursPerWeek</th>
-      <th>...</th>
-      <th>ContentDownloadsPerMonth</th>
-      <th>GenrePreference</th>
-      <th>UserRating</th>
-      <th>SupportTicketsPerMonth</th>
-      <th>Gender</th>
-      <th>WatchlistSize</th>
-      <th>ParentalControl</th>
-      <th>SubtitlesEnabled</th>
-      <th>CustomerID</th>
-      <th>Churn</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>20</td>
-      <td>11.055215</td>
-      <td>221.104302</td>
-      <td>Premium</td>
-      <td>Mailed check</td>
-      <td>No</td>
-      <td>Both</td>
-      <td>No</td>
-      <td>Mobile</td>
-      <td>36.758104</td>
-      <td>...</td>
-      <td>10</td>
-      <td>Sci-Fi</td>
-      <td>2.176498</td>
-      <td>4</td>
-      <td>Male</td>
-      <td>3</td>
-      <td>No</td>
-      <td>No</td>
-      <td>CB6SXPNVZA</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>57</td>
-      <td>5.175208</td>
-      <td>294.986882</td>
-      <td>Basic</td>
-      <td>Credit card</td>
-      <td>Yes</td>
-      <td>Movies</td>
-      <td>No</td>
-      <td>Tablet</td>
-      <td>32.450568</td>
-      <td>...</td>
-      <td>18</td>
-      <td>Action</td>
-      <td>3.478632</td>
-      <td>8</td>
-      <td>Male</td>
-      <td>23</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>S7R2G87O09</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>73</td>
-      <td>12.106657</td>
-      <td>883.785952</td>
-      <td>Basic</td>
-      <td>Mailed check</td>
-      <td>Yes</td>
-      <td>Movies</td>
-      <td>No</td>
-      <td>Computer</td>
-      <td>7.395160</td>
-      <td>...</td>
-      <td>23</td>
-      <td>Fantasy</td>
-      <td>4.238824</td>
-      <td>6</td>
-      <td>Male</td>
-      <td>1</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>EASDC20BDT</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>32</td>
-      <td>7.263743</td>
-      <td>232.439774</td>
-      <td>Basic</td>
-      <td>Electronic check</td>
-      <td>No</td>
-      <td>TV Shows</td>
-      <td>No</td>
-      <td>Tablet</td>
-      <td>27.960389</td>
-      <td>...</td>
-      <td>30</td>
-      <td>Drama</td>
-      <td>4.276013</td>
-      <td>2</td>
-      <td>Male</td>
-      <td>24</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>NPF69NT69N</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>57</td>
-      <td>16.953078</td>
-      <td>966.325422</td>
-      <td>Premium</td>
-      <td>Electronic check</td>
-      <td>Yes</td>
-      <td>TV Shows</td>
-      <td>No</td>
-      <td>TV</td>
-      <td>20.083397</td>
-      <td>...</td>
-      <td>20</td>
-      <td>Comedy</td>
-      <td>3.616170</td>
-      <td>4</td>
-      <td>Female</td>
-      <td>0</td>
-      <td>No</td>
-      <td>No</td>
-      <td>4LGYPK7VOL</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 21 columns</p>
-</div>
-```
-:::
-:::
 
-::: {.cell .code execution_count="5" scrolled="true"}
 ``` python
 test_df = pd.read_csv("test.csv")
 print('test_df Shape:', test_df.shape)
 test_df.head()
 ```
 
-::: {.output .stream .stdout}
-    test_df Shape: (104480, 20)
-:::
 
 ::: {.output .execute_result execution_count="5"}
 ```{=html}
