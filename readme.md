@@ -1,4 +1,4 @@
-![COUR_IPO.png](vertopal_bad73b54b05e4bdcb74fd894d0d06097/COUR_IPO.png)
+![COUR_IPO.png](images/COUR_IPO.png)
 
 # Welcome to the Data Science Coding Challange!
 
@@ -270,11 +270,11 @@ plt.show()
 ```
 
 
-![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/86eade401a63b1004817af86a4c675be010d45a8.png)
+![](images/86eade401a63b1004817af86a4c675be010d45a8.png)
 
 
 
-![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/5fb81e036de2a5764090ec42d46dca29525b9f6d.png)
+![](images/5fb81e036de2a5764090ec42d46dca29525b9f6d.png)
 
 
 The distributions of the categorical features are even and looks
@@ -296,7 +296,7 @@ plt.show()
 ```
 
 
-![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/d5d381bd094677adb613cfd052a853862dfaf83b.png)
+![](images/d5d381bd094677adb613cfd052a853862dfaf83b.png)
 
 ``` python
 # Set the style of seaborn plot
@@ -324,19 +324,19 @@ plt.show()
 ```
 
 
-![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/297ddff575ddc9cb692d664fbe0794d15eccb212.png)
+![](images/297ddff575ddc9cb692d664fbe0794d15eccb212.png)
 
 
 
-![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/3fd91d19dfe3bf10af6442476d43a36acc810287.png)
+![](images/3fd91d19dfe3bf10af6442476d43a36acc810287.png)
 
 
 
-![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/69009ee92d7ffb401fb997ca9099d2b03494cd23.png)
+![](images/69009ee92d7ffb401fb997ca9099d2b03494cd23.png)
 
 
 
-![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/4fe3b98d1e1ab96164f23fe993634ab1dd563c19.png)
+![](images/4fe3b98d1e1ab96164f23fe993634ab1dd563c19.png)
 
 ``` python
 # Select numerical columns
@@ -363,7 +363,7 @@ plt.show()
 ```
 
 
-![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/065f6556257c43e723e0e954975544f640909211.png)
+![](images/065f6556257c43e723e0e954975544f640909211.png)
 
 From the heatmap above, there are several insights we can see:
 
@@ -565,7 +565,7 @@ plt.show()
     weighted avg       0.80      0.68      0.71    243787
 
 
-![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/cad508a102f80dc7acbcefa34f2f2a7e0ce05731.png)
+![](images/cad508a102f80dc7acbcefa34f2f2a7e0ce05731.png)
 
 From the classification report, we can see that the logistic regression
 model has a recall of 0.69 for the positive class (Churn = 1). Recall is
