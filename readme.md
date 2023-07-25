@@ -680,3 +680,7 @@ Once we are happy with our `prediction_df` and
 using the blue **Submit Assignment** at the top of your notebook. Don\'t
 worry if your initial submission isn\'t perfect as you have multiple
 submission attempts and will obtain some feedback after each submission!
+
+## Result 
+
+![](images/result.png)
