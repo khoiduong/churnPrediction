@@ -224,21 +224,6 @@ print('test_df Shape:', test_df.shape)
 test_df.head()
 ```
 
-
-To represent the given data as a table in Markdown format, you can use the following:
-
-```markdown
-| AccountAge | MonthlyCharges | TotalCharges | SubscriptionType | PaymentMethod     | PaperlessBilling | ContentType | MultiDeviceAccess | DeviceRegistered | ViewingHoursPerWeek | AverageViewingDuration | ContentDownloadsPerMonth | GenrePreference | UserRating | SupportTicketsPerMonth | Gender | WatchlistSize | ParentalControl | SubtitlesEnabled | CustomerID  |
-|------------|----------------|--------------|------------------|-------------------|------------------|-------------|-------------------|------------------|---------------------|------------------------|---------------------------|-----------------|------------|------------------------|--------|---------------|-----------------|------------------|-------------|
-| 38         | 17.869374      | 679.036195   | Premium          | Mailed check      | No               | TV Shows    | No                | TV               | 29.126308           | 122.274031             | 42                      | Comedy          | 3.522724   | 2                      | Male   | 23            | No              | No               | O1W6BHP6RM  |
-| 77         | 9.912854       | 763.289768   | Basic            | Electronic check | Yes              | TV Shows    | No                | TV               | 36.873729           | 57.093319              | 43                      | Action          | 2.021545   | 2                      | Female | 22            | Yes             | No               | LFR4X92X8H  |
-| 5          | 15.019011      | 75.095057    | Standard         | Bank transfer    | No               | TV Shows    | Yes               | Computer         | 7.601729            | 140.414001             | 14                      | Sci-Fi          | 4.806126   | 2                      | Female | 22            | No              | Yes              | QM5GBIYODA  |
-| 88         | 15.357406      | 1351.451692  | Standard         | Electronic check | No               | Both        | Yes               | Tablet           | 35.586430           | 177.002419             | 14                      | Comedy          | 4.943900   | 0                      | Female | 23            | Yes             | Yes              | D9RXTK2K9F  |
-| 91         | 12.406033      | 1128.949004  | Standard         | Credit card      | Yes              | TV Shows    | Yes               | Tablet           | 23.503651           | 70.308376              | 6                       | Drama           | 2.846880   | 6                      | Female | 0             | No              | No               | ENTCCHR1LR  |
-```
-
-When rendered in Markdown, the table will look like this:
-
 | AccountAge | MonthlyCharges | TotalCharges | SubscriptionType | PaymentMethod     | PaperlessBilling | ContentType | MultiDeviceAccess | DeviceRegistered | ViewingHoursPerWeek | AverageViewingDuration | ContentDownloadsPerMonth | GenrePreference | UserRating | SupportTicketsPerMonth | Gender | WatchlistSize | ParentalControl | SubtitlesEnabled | CustomerID  |
 |------------|----------------|--------------|------------------|-------------------|------------------|-------------|-------------------|------------------|---------------------|------------------------|---------------------------|-----------------|------------|------------------------|--------|---------------|-----------------|------------------|-------------|
 | 38         | 17.869374      | 679.036195   | Premium          | Mailed check      | No               | TV Shows    | No                | TV               | 29.126308           | 122.274031             | 42                      | Comedy          | 3.522724   | 2                      | Male   | 23            | No              | No               | O1W6BHP6RM  |
