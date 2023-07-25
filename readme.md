@@ -1,28 +1,5 @@
----
-jupyter:
-  kernelspec:
-    display_name: Python 3
-    language: python
-    name: python3
-  language_info:
-    codemirror_mode:
-      name: ipython
-      version: 3
-    file_extension: .py
-    mimetype: text/x-python
-    name: python
-    nbconvert_exporter: python
-    pygments_lexer: ipython3
-    version: 3.7.6
-  nbformat: 4
-  nbformat_minor: 4
----
-
-::: {.cell .markdown}
 ![COUR_IPO.png](vertopal_bad73b54b05e4bdcb74fd894d0d06097/COUR_IPO.png)
-:::
 
-::: {.cell .markdown}
 # Welcome to the Data Science Coding Challange!
 
 Test your skills in a real-world coding challenge. Coding Challenges
@@ -33,9 +10,7 @@ job ready. So, why not create fun challenges and give winners something
 truly valuable such as complimentary access to select Data Science
 courses, or the ability to receive an achievement badge on their
 Coursera Skills Profile - highlighting their performance to recruiters.
-:::
 
-::: {.cell .markdown}
 ## Introduction
 
 In this challenge, you\'ll get the opportunity to tackle one of the most
@@ -73,13 +48,9 @@ interest in understanding the likelihood of each individual customer to
 churn in their subscription so that resources can be allocated
 appropriately to support customers. In this challenge, you will use your
 machine learning toolkit to do just that!
-:::
 
-::: {.cell .markdown}
 ## Understanding the Datasets
-:::
 
-::: {.cell .markdown}
 ### Train vs. Test {#train-vs-test}
 
 In this competition, you'll gain access to two datasets that are samples
@@ -99,9 +70,7 @@ It's your job to predict this outcome!
 
 Using the patterns you find in the `train.csv` data, predict whether the
 subscriptions in `test.csv` will be continued for another month, or not.
-:::
 
-::: {.cell .markdown}
 ### Dataset descriptions
 
 Both `train.csv` and `test.csv` contain one row for each unique
@@ -115,9 +84,7 @@ Besides that column, both datasets have an identical set of features
 that can be used to train your model to make predictions. Below you can
 see descriptions of each feature. Familiarize yourself with them so that
 you can harness them most effectively for this machine learning task!
-:::
 
-::: {.cell .code execution_count="1"}
 ``` python
 import pandas as pd
 data_descriptions = pd.read_csv('data_descriptions.csv')
@@ -125,188 +92,30 @@ pd.set_option('display.max_colwidth', None)
 data_descriptions
 ```
 
-::: {.output .execute_result execution_count="1"}
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+| Column_name            | Column_type | Data_type | Description                                                      |
+|------------------------|-------------|-----------|------------------------------------------------------------------|
+| AccountAge             | Feature     | integer   | The age of the user's account in months.                          |
+| MonthlyCharges         | Feature     | float     | The amount charged to the user on a monthly basis.               |
+| TotalCharges           | Feature     | float     | The total charges incurred by the user over the account's lifetime.|
+| SubscriptionType       | Feature     | object    | The type of subscription chosen by the user (Basic, Standard, or Premium).|
+| PaymentMethod          | Feature     | string    | The method of payment used by the user.                          |
+| PaperlessBilling       | Feature     | string    | Indicates whether the user has opted for paperless billing (Yes or No).|
+| ContentType            | Feature     | string    | The type of content preferred by the user (Movies, TV Shows, or Both).|
+| MultiDeviceAccess      | Feature     | string    | Indicates whether the user has access to the service on multiple devices (Yes or No).|
+| DeviceRegistered       | Feature     | string    | The type of device registered by the user (TV, Mobile, Tablet, or Computer).|
+| ViewingHoursPerWeek    | Feature     | float     | The number of hours the user spends watching content per week.   |
+| AverageViewingDuration | Feature     | float     | The average duration of each viewing session in minutes.         |
+| ContentDownloadsPerMonth | Feature   | integer   | The number of content downloads by the user per month.           |
+| GenrePreference        | Feature     | string    | The preferred genre of content chosen by the user.               |
+| UserRating             | Feature     | float     | The user's rating for the service on a scale of 1 to 5.          |
+| SupportTicketsPerMonth | Feature     | integer   | The number of support tickets raised by the user per month.      |
+| Gender                 | Feature     | string    | The gender of the user (Male or Female).                         |
+| WatchlistSize          | Feature     | float     | The number of items in the user's watchlist.                     |
+| ParentalControl        | Feature     | string    | Indicates whether parental control is enabled for the user (Yes or No).|
+| SubtitlesEnabled       | Feature     | string    | Indicates whether subtitles are enabled for the user (Yes or No).|
+| CustomerID             | Identifier  | string    | A unique identifier for each customer.                           |
+| Churn                  | Target      | integer   | The target variable indicating whether a user has churned or not (1 for churned, 0 for not churned).|
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Column_name</th>
-      <th>Column_type</th>
-      <th>Data_type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AccountAge</td>
-      <td>Feature</td>
-      <td>integer</td>
-      <td>The age of the user's account in months.</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>MonthlyCharges</td>
-      <td>Feature</td>
-      <td>float</td>
-      <td>The amount charged to the user on a monthly basis.</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>TotalCharges</td>
-      <td>Feature</td>
-      <td>float</td>
-      <td>The total charges incurred by the user over the account's lifetime.</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>SubscriptionType</td>
-      <td>Feature</td>
-      <td>object</td>
-      <td>The type of subscription chosen by the user (Basic, Standard, or Premium).</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>PaymentMethod</td>
-      <td>Feature</td>
-      <td>string</td>
-      <td>The method of payment used by the user.</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>PaperlessBilling</td>
-      <td>Feature</td>
-      <td>string</td>
-      <td>Indicates whether the user has opted for paperless billing (Yes or No).</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>ContentType</td>
-      <td>Feature</td>
-      <td>string</td>
-      <td>The type of content preferred by the user (Movies, TV Shows, or Both).</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>MultiDeviceAccess</td>
-      <td>Feature</td>
-      <td>string</td>
-      <td>Indicates whether the user has access to the service on multiple devices (Yes or No).</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>DeviceRegistered</td>
-      <td>Feature</td>
-      <td>string</td>
-      <td>The type of device registered by the user (TV, Mobile, Tablet, or Computer).</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>ViewingHoursPerWeek</td>
-      <td>Feature</td>
-      <td>float</td>
-      <td>The number of hours the user spends watching content per week.</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>AverageViewingDuration</td>
-      <td>Feature</td>
-      <td>float</td>
-      <td>The average duration of each viewing session in minutes.</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>ContentDownloadsPerMonth</td>
-      <td>Feature</td>
-      <td>integer</td>
-      <td>The number of content downloads by the user per month.</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>GenrePreference</td>
-      <td>Feature</td>
-      <td>string</td>
-      <td>The preferred genre of content chosen by the user.</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>UserRating</td>
-      <td>Feature</td>
-      <td>float</td>
-      <td>The user's rating for the service on a scale of 1 to 5.</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>SupportTicketsPerMonth</td>
-      <td>Feature</td>
-      <td>integer</td>
-      <td>The number of support tickets raised by the user per month.</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>Gender</td>
-      <td>Feature</td>
-      <td>string</td>
-      <td>The gender of the user (Male or Female).</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>WatchlistSize</td>
-      <td>Feature</td>
-      <td>float</td>
-      <td>The number of items in the user's watchlist.</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>ParentalControl</td>
-      <td>Feature</td>
-      <td>string</td>
-      <td>Indicates whether parental control is enabled for the user (Yes or No).</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>SubtitlesEnabled</td>
-      <td>Feature</td>
-      <td>string</td>
-      <td>Indicates whether subtitles are enabled for the user (Yes or No).</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>CustomerID</td>
-      <td>Identifier</td>
-      <td>string</td>
-      <td>A unique identifier for each customer.</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>Churn</td>
-      <td>Target</td>
-      <td>integer</td>
-      <td>The target variable indicating whether a user has churned or not (1 for churned, 0 for not churned).</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-```
-:::
-:::
-
-::: {.cell .markdown}
 ## How to Submit your Predictions to Coursera
 
 Submission Format:
