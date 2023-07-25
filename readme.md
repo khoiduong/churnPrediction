@@ -225,181 +225,36 @@ test_df.head()
 ```
 
 
-::: {.output .execute_result execution_count="5"}
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+To represent the given data as a table in Markdown format, you can use the following:
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AccountAge</th>
-      <th>MonthlyCharges</th>
-      <th>TotalCharges</th>
-      <th>SubscriptionType</th>
-      <th>PaymentMethod</th>
-      <th>PaperlessBilling</th>
-      <th>ContentType</th>
-      <th>MultiDeviceAccess</th>
-      <th>DeviceRegistered</th>
-      <th>ViewingHoursPerWeek</th>
-      <th>AverageViewingDuration</th>
-      <th>ContentDownloadsPerMonth</th>
-      <th>GenrePreference</th>
-      <th>UserRating</th>
-      <th>SupportTicketsPerMonth</th>
-      <th>Gender</th>
-      <th>WatchlistSize</th>
-      <th>ParentalControl</th>
-      <th>SubtitlesEnabled</th>
-      <th>CustomerID</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>38</td>
-      <td>17.869374</td>
-      <td>679.036195</td>
-      <td>Premium</td>
-      <td>Mailed check</td>
-      <td>No</td>
-      <td>TV Shows</td>
-      <td>No</td>
-      <td>TV</td>
-      <td>29.126308</td>
-      <td>122.274031</td>
-      <td>42</td>
-      <td>Comedy</td>
-      <td>3.522724</td>
-      <td>2</td>
-      <td>Male</td>
-      <td>23</td>
-      <td>No</td>
-      <td>No</td>
-      <td>O1W6BHP6RM</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>77</td>
-      <td>9.912854</td>
-      <td>763.289768</td>
-      <td>Basic</td>
-      <td>Electronic check</td>
-      <td>Yes</td>
-      <td>TV Shows</td>
-      <td>No</td>
-      <td>TV</td>
-      <td>36.873729</td>
-      <td>57.093319</td>
-      <td>43</td>
-      <td>Action</td>
-      <td>2.021545</td>
-      <td>2</td>
-      <td>Female</td>
-      <td>22</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>LFR4X92X8H</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>5</td>
-      <td>15.019011</td>
-      <td>75.095057</td>
-      <td>Standard</td>
-      <td>Bank transfer</td>
-      <td>No</td>
-      <td>TV Shows</td>
-      <td>Yes</td>
-      <td>Computer</td>
-      <td>7.601729</td>
-      <td>140.414001</td>
-      <td>14</td>
-      <td>Sci-Fi</td>
-      <td>4.806126</td>
-      <td>2</td>
-      <td>Female</td>
-      <td>22</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>QM5GBIYODA</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>88</td>
-      <td>15.357406</td>
-      <td>1351.451692</td>
-      <td>Standard</td>
-      <td>Electronic check</td>
-      <td>No</td>
-      <td>Both</td>
-      <td>Yes</td>
-      <td>Tablet</td>
-      <td>35.586430</td>
-      <td>177.002419</td>
-      <td>14</td>
-      <td>Comedy</td>
-      <td>4.943900</td>
-      <td>0</td>
-      <td>Female</td>
-      <td>23</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>D9RXTK2K9F</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>91</td>
-      <td>12.406033</td>
-      <td>1128.949004</td>
-      <td>Standard</td>
-      <td>Credit card</td>
-      <td>Yes</td>
-      <td>TV Shows</td>
-      <td>Yes</td>
-      <td>Tablet</td>
-      <td>23.503651</td>
-      <td>70.308376</td>
-      <td>6</td>
-      <td>Drama</td>
-      <td>2.846880</td>
-      <td>6</td>
-      <td>Female</td>
-      <td>0</td>
-      <td>No</td>
-      <td>No</td>
-      <td>ENTCCHR1LR</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+```markdown
+| AccountAge | MonthlyCharges | TotalCharges | SubscriptionType | PaymentMethod     | PaperlessBilling | ContentType | MultiDeviceAccess | DeviceRegistered | ViewingHoursPerWeek | AverageViewingDuration | ContentDownloadsPerMonth | GenrePreference | UserRating | SupportTicketsPerMonth | Gender | WatchlistSize | ParentalControl | SubtitlesEnabled | CustomerID  |
+|------------|----------------|--------------|------------------|-------------------|------------------|-------------|-------------------|------------------|---------------------|------------------------|---------------------------|-----------------|------------|------------------------|--------|---------------|-----------------|------------------|-------------|
+| 38         | 17.869374      | 679.036195   | Premium          | Mailed check      | No               | TV Shows    | No                | TV               | 29.126308           | 122.274031             | 42                      | Comedy          | 3.522724   | 2                      | Male   | 23            | No              | No               | O1W6BHP6RM  |
+| 77         | 9.912854       | 763.289768   | Basic            | Electronic check | Yes              | TV Shows    | No                | TV               | 36.873729           | 57.093319              | 43                      | Action          | 2.021545   | 2                      | Female | 22            | Yes             | No               | LFR4X92X8H  |
+| 5          | 15.019011      | 75.095057    | Standard         | Bank transfer    | No               | TV Shows    | Yes               | Computer         | 7.601729            | 140.414001             | 14                      | Sci-Fi          | 4.806126   | 2                      | Female | 22            | No              | Yes              | QM5GBIYODA  |
+| 88         | 15.357406      | 1351.451692  | Standard         | Electronic check | No               | Both        | Yes               | Tablet           | 35.586430           | 177.002419             | 14                      | Comedy          | 4.943900   | 0                      | Female | 23            | Yes             | Yes              | D9RXTK2K9F  |
+| 91         | 12.406033      | 1128.949004  | Standard         | Credit card      | Yes              | TV Shows    | Yes               | Tablet           | 23.503651           | 70.308376              | 6                       | Drama           | 2.846880   | 6                      | Female | 0             | No              | No               | ENTCCHR1LR  |
 ```
-:::
-:::
 
-::: {.cell .markdown}
+When rendered in Markdown, the table will look like this:
+
+| AccountAge | MonthlyCharges | TotalCharges | SubscriptionType | PaymentMethod     | PaperlessBilling | ContentType | MultiDeviceAccess | DeviceRegistered | ViewingHoursPerWeek | AverageViewingDuration | ContentDownloadsPerMonth | GenrePreference | UserRating | SupportTicketsPerMonth | Gender | WatchlistSize | ParentalControl | SubtitlesEnabled | CustomerID  |
+|------------|----------------|--------------|------------------|-------------------|------------------|-------------|-------------------|------------------|---------------------|------------------------|---------------------------|-----------------|------------|------------------------|--------|---------------|-----------------|------------------|-------------|
+| 38         | 17.869374      | 679.036195   | Premium          | Mailed check      | No               | TV Shows    | No                | TV               | 29.126308           | 122.274031             | 42                      | Comedy          | 3.522724   | 2                      | Male   | 23            | No              | No               | O1W6BHP6RM  |
+| 77         | 9.912854       | 763.289768   | Basic            | Electronic check | Yes              | TV Shows    | No                | TV               | 36.873729           | 57.093319              | 43                      | Action          | 2.021545   | 2                      | Female | 22            | Yes             | No               | LFR4X92X8H  |
+| 5          | 15.019011      | 75.095057    | Standard         | Bank transfer    | No               | TV Shows    | Yes               | Computer         | 7.601729            | 140.414001             | 14                      | Sci-Fi          | 4.806126   | 2                      | Female | 22            | No              | Yes              | QM5GBIYODA  |
+| 88         | 15.357406      | 1351.451692  | Standard         | Electronic check | No               | Both        | Yes               | Tablet           | 35.586430           | 177.002419             | 14                      | Comedy          | 4.943900   | 0                      | Female | 23            | Yes             | Yes              | D9RXTK2K9F  |
+| 91         | 12.406033      | 1128.949004  | Standard         | Credit card      | Yes              | TV Shows    | Yes               | Tablet           | 23.503651           | 70.308376              | 6                       | Drama           | 2.846880   | 6                      | Female | 0             | No              | No               | ENTCCHR1LR  |
+
+
 ## Explore, Clean, Validate, and Visualize the Data (optional)
 
 Feel free to explore, clean, validate, and visualize the data however
 you see fit for this competition to help determine or optimize your
 predictive model. Please note - the final autograding will only be on
 the accuracy of the `prediction_df` predictions.
-:::
 
-::: {.cell .code execution_count="6" scrolled="false"}
 ``` python
 # your code here (optional)
 test_df = test_df.dropna()
@@ -429,23 +284,19 @@ plt.tight_layout()
 plt.show()
 ```
 
-::: {.output .display_data}
+
 ![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/86eade401a63b1004817af86a4c675be010d45a8.png)
-:::
 
-::: {.output .display_data}
+
+
 ![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/5fb81e036de2a5764090ec42d46dca29525b9f6d.png)
-:::
-:::
 
-::: {.cell .markdown}
+
 The distributions of the categorical features are even and looks
 uniform.
 
 Below is zoom in on the y-axis.
-:::
 
-::: {.cell .code execution_count="7"}
 ``` python
 fig, axs = plt.subplots(nrows=2, ncols=3, figsize=(15, 10))
 axs = axs.flatten()
@@ -459,12 +310,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-::: {.output .display_data}
-![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/d5d381bd094677adb613cfd052a853862dfaf83b.png)
-:::
-:::
 
-::: {.cell .code execution_count="8"}
+![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/d5d381bd094677adb613cfd052a853862dfaf83b.png)
+
 ``` python
 # Set the style of seaborn plot
 sns.set(style="whitegrid")
@@ -477,9 +325,7 @@ def plot_box(data, x_column, y_column, title, xlabel, ylabel, figsize=(8, 4)):
     plt.xlabel(xlabel, size=12)
     plt.ylabel(ylabel, size=12)
 ```
-:::
 
-::: {.cell .code execution_count="9" scrolled="false"}
 ``` python
 # Plot the distribution of some numerical features
 numerical_features = ['AccountAge', 'MonthlyCharges', 'TotalCharges', 'ViewingHoursPerWeek']
@@ -492,24 +338,21 @@ plt.tight_layout()
 plt.show()
 ```
 
-::: {.output .display_data}
+
 ![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/297ddff575ddc9cb692d664fbe0794d15eccb212.png)
-:::
 
-::: {.output .display_data}
+
+
 ![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/3fd91d19dfe3bf10af6442476d43a36acc810287.png)
-:::
 
-::: {.output .display_data}
+
+
 ![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/69009ee92d7ffb401fb997ca9099d2b03494cd23.png)
-:::
 
-::: {.output .display_data}
+
+
 ![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/4fe3b98d1e1ab96164f23fe993634ab1dd563c19.png)
-:::
-:::
 
-::: {.cell .code execution_count="10" scrolled="false"}
 ``` python
 # Select numerical columns
 numerical_cols = train_df.select_dtypes(include=['float64', 'int64']).columns
@@ -534,12 +377,9 @@ plt.title('Correlation Heatmap of Numerical Features')
 plt.show()
 ```
 
-::: {.output .display_data}
-![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/065f6556257c43e723e0e954975544f640909211.png)
-:::
-:::
 
-::: {.cell .markdown}
+![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/065f6556257c43e723e0e954975544f640909211.png)
+
 From the heatmap above, there are several insights we can see:
 
 1.  The correlation between \'AccountAge\' and \'TotalCharges\' is
@@ -552,9 +392,9 @@ From the heatmap above, there are several insights we can see:
     negative correlation with \'Churn\' because the longer the customer
     own the account, the longer the spend watching, and the more they
     pay would result in them likely to cancel the subscription.
-:::
 
-::: {.cell .markdown}
+
+
 ## Make predictions (required)
 
 Remember you should create a dataframe named `prediction_df` with
@@ -572,9 +412,7 @@ The naming convention of the dataframe and columns are critical for our
 autograding, so please make sure to use the exact naming conventions of
 `prediction_df` with column names `CustomerID` and
 `predicted_probability`!
-:::
 
-::: {.cell .markdown}
 ### Example prediction submission:
 
 The code below is a very naive prediction method that simply predicts
@@ -582,25 +420,17 @@ churn using a Dummy Classifier. This is used as just an example showing
 the submission format required. Please change/alter/delete this code
 below and create your own improved prediction methods for generating
 `prediction_df`.
-:::
 
-::: {.cell .markdown}
 **PLEASE CHANGE CODE BELOW TO IMPLEMENT YOUR OWN PREDICTIONS**
-:::
 
-::: {.cell .markdown}
 # One Hot Encoding and Standard Scaler
-:::
 
-::: {.cell .markdown}
 Let\'s start with encoding the categorical variables. We\'ll use one-hot
 encoding, which is a common method for converting categorical variables
 into a format that works better with classification and regression
 algorithms. It creates new binary columns for each category/label
 present in the original columns
-:::
 
-::: {.cell .code execution_count="11"}
 ``` python
 ### PLEASE CHANGE THIS CODE TO IMPLEMENT YOUR OWN PREDICTIONS
 
@@ -630,179 +460,16 @@ train_data_encoded = pd.concat([train_df.select_dtypes(include=['int64', 'float6
 train_data_encoded.head()
 ```
 
-::: {.output .execute_result execution_count="11"}
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+| AccountAge | MonthlyCharges | TotalCharges | ViewingHoursPerWeek | AverageViewingDuration | ContentDownloadsPerMonth | UserRating | SupportTicketsPerMonth | WatchlistSize | Churn | ... | DeviceRegistered_Mobile | DeviceRegistered_TV | DeviceRegistered_Tablet | GenrePreference_Comedy | GenrePreference_Drama | GenrePreference_Fantasy | GenrePreference_Sci-Fi | Gender_Male | ParentalControl_Yes | SubtitlesEnabled_Yes |
+|------------|----------------|--------------|---------------------|------------------------|---------------------------|------------|------------------------|---------------|-------|-----|--------------------------|---------------------|------------------------|-----------------------|----------------------|-------------------------|-----------------------|-------------|----------------------|----------------------|
+| 20         | 11.055215      | 221.104302   | 36.758104           | 63.531377              | 10                        | 2.176498   | 4                      | 3             | 0     | ... | 1.0                      | 0.0                 | 0.0                    | 0.0                   | 0.0                  | 0.0                     | 1.0                   | 1.0         | 0.0                  | 0.0                  |
+| 57         | 5.175208       | 294.986882   | 32.450568           | 25.725595              | 18                        | 3.478632   | 8                      | 23            | 0     | ... | 0.0                      | 0.0                 | 1.0                    | 0.0                   | 0.0                  | 0.0                     | 1.0                   | 1.0         | 0.0                  | 1.0                  |
+| 73         | 12.106657      | 883.785952   | 7.395160            | 57.364061              | 23                        | 4.238824   | 6                      | 1             | 0     | ... | 0.0                      | 0.0                 | 0.0                    | 0.0                   | 0.0                  | 1.0                     | 0.0                   | 1.0         | 1.0                  | 1.0                  |
+| 32         | 7.263743       | 232.439774   | 27.960389           | 131.537507             | 30                        | 4.276013   | 2                      | 24            | 0     | ... | 0.0                      | 0.0                 | 1.0                    | 0.0                   | 1.0                  | 0.0                     | 0.0                   | 1.0         | 1.0                  | 1.0                  |
+| 57         | 16.953078      | 966.325422   | 20.083397           | 45.356653              | 20                        | 3.616170   | 4                      | 0             | 0     | ... | 0.0                      | 1.0                 | 0.0                    | 1.0                   | 0.0                  | 0.0                     | 0.0                   | 0.0         | 0.0                  | 0.0                  |
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AccountAge</th>
-      <th>MonthlyCharges</th>
-      <th>TotalCharges</th>
-      <th>ViewingHoursPerWeek</th>
-      <th>AverageViewingDuration</th>
-      <th>ContentDownloadsPerMonth</th>
-      <th>UserRating</th>
-      <th>SupportTicketsPerMonth</th>
-      <th>WatchlistSize</th>
-      <th>Churn</th>
-      <th>...</th>
-      <th>DeviceRegistered_Mobile</th>
-      <th>DeviceRegistered_TV</th>
-      <th>DeviceRegistered_Tablet</th>
-      <th>GenrePreference_Comedy</th>
-      <th>GenrePreference_Drama</th>
-      <th>GenrePreference_Fantasy</th>
-      <th>GenrePreference_Sci-Fi</th>
-      <th>Gender_Male</th>
-      <th>ParentalControl_Yes</th>
-      <th>SubtitlesEnabled_Yes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>20</td>
-      <td>11.055215</td>
-      <td>221.104302</td>
-      <td>36.758104</td>
-      <td>63.531377</td>
-      <td>10</td>
-      <td>2.176498</td>
-      <td>4</td>
-      <td>3</td>
-      <td>0</td>
-      <td>...</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>57</td>
-      <td>5.175208</td>
-      <td>294.986882</td>
-      <td>32.450568</td>
-      <td>25.725595</td>
-      <td>18</td>
-      <td>3.478632</td>
-      <td>8</td>
-      <td>23</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>73</td>
-      <td>12.106657</td>
-      <td>883.785952</td>
-      <td>7.395160</td>
-      <td>57.364061</td>
-      <td>23</td>
-      <td>4.238824</td>
-      <td>6</td>
-      <td>1</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>32</td>
-      <td>7.263743</td>
-      <td>232.439774</td>
-      <td>27.960389</td>
-      <td>131.537507</td>
-      <td>30</td>
-      <td>4.276013</td>
-      <td>2</td>
-      <td>24</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-      <td>1.0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>57</td>
-      <td>16.953078</td>
-      <td>966.325422</td>
-      <td>20.083397</td>
-      <td>45.356653</td>
-      <td>20</td>
-      <td>3.616170</td>
-      <td>4</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>1.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 29 columns</p>
-</div>
-```
-:::
-:::
 
-::: {.cell .markdown}
 We have successfully one-hot encoded the categorical variables in the
 training data. We can see that new binary columns have been created for
 each category in each of the original categorical variables. For
@@ -816,9 +483,7 @@ Next, let\'s scale the numerical variables. For this, we can use
 standard scaling, which transforms the variables to have a mean of 0 and
 a standard deviation of 1. This ensures that all numerical features have
 the same scale, which is important for many machine learning algorithms.
-:::
 
-::: {.cell .code execution_count="12"}
 ``` python
 # Initialize standard scaler
 scaler = StandardScaler()
@@ -837,188 +502,22 @@ train_data_encoded[numerical_columns] = scaler.transform(train_data_encoded[nume
 train_data_encoded.head()
 ```
 
-::: {.output .execute_result execution_count="12"}
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+| AccountAge | MonthlyCharges | TotalCharges | ViewingHoursPerWeek | AverageViewingDuration | ContentDownloadsPerMonth | UserRating | SupportTicketsPerMonth | WatchlistSize | Churn | ... | DeviceRegistered_Mobile | DeviceRegistered_TV | DeviceRegistered_Tablet | GenrePreference_Comedy | GenrePreference_Drama | GenrePreference_Fantasy | GenrePreference_Sci-Fi | Gender_Male | ParentalControl_Yes | SubtitlesEnabled_Yes |
+|------------|----------------|--------------|---------------------|------------------------|---------------------------|------------|------------------------|---------------|-------|-----|--------------------------|---------------------|------------------------|-----------------------|----------------------|-------------------------|-----------------------|-------------|----------------------|----------------------|
+| -1.169131  | -0.331703      | -1.012550    | 1.445777            | -0.568906              | -1.005712                 | -0.715179   | -0.175519              | -1.253786      | 0     | ... | 1.732672                 | -0.575053           | -0.578590              | -0.501939             | -0.499914            | -0.501266               | 2.010816              | 1.000299    | -1.001572            | -1.002353            |
+| -0.089945  | -1.690423      | -0.871303    | 1.062671            | -1.317459              | -0.450971                 | 0.411960    | 1.216976               | 1.526687       | 0     | ... | -0.577143                | -0.575053           | 1.728341               | -0.501939             | -0.499914            | -0.501266               | -0.497310             | 1.000299    | -1.001572            | 0.997652             |
+| 0.376731   | -0.088741      | 0.254353     | -1.165718           | -0.691019              | -0.104258                 | 1.069988    | 0.520728               | -1.531833      | 0     | ... | -0.577143                | -0.575053           | -0.578590              | -0.501939             | -0.499914            | 1.994948                | -0.497310             | 1.000299    | 0.998430             | 0.997652             |
+| -0.819125  | -1.207816      | -0.990879    | 0.663322            | 0.777613               | 0.381141                  | 1.102179    | -0.871766              | 1.665711       | 0     | ... | -0.577143                | -0.575053           | 1.728341               | -0.501939             | 2.000344            | -0.501266               | -0.497310             | 1.000299    | 0.998430             | 0.997652             |
+| -0.089945  | 1.031143       | 0.412150     | -0.037246           | -0.928765              | -0.312285                 | 0.531014    | -0.175519              | -1.670857      | 0     | ... | -0.577143                | 1.738970            | -0.578590              | 1.992275              | -0.499914            | -0.501266               | -0.497310             | -0.999701   | -1.001572            | -1.002353            |
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AccountAge</th>
-      <th>MonthlyCharges</th>
-      <th>TotalCharges</th>
-      <th>ViewingHoursPerWeek</th>
-      <th>AverageViewingDuration</th>
-      <th>ContentDownloadsPerMonth</th>
-      <th>UserRating</th>
-      <th>SupportTicketsPerMonth</th>
-      <th>WatchlistSize</th>
-      <th>Churn</th>
-      <th>...</th>
-      <th>DeviceRegistered_Mobile</th>
-      <th>DeviceRegistered_TV</th>
-      <th>DeviceRegistered_Tablet</th>
-      <th>GenrePreference_Comedy</th>
-      <th>GenrePreference_Drama</th>
-      <th>GenrePreference_Fantasy</th>
-      <th>GenrePreference_Sci-Fi</th>
-      <th>Gender_Male</th>
-      <th>ParentalControl_Yes</th>
-      <th>SubtitlesEnabled_Yes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>-1.169131</td>
-      <td>-0.331703</td>
-      <td>-1.012550</td>
-      <td>1.445777</td>
-      <td>-0.568906</td>
-      <td>-1.005712</td>
-      <td>-0.715179</td>
-      <td>-0.175519</td>
-      <td>-1.253786</td>
-      <td>0</td>
-      <td>...</td>
-      <td>1.732672</td>
-      <td>-0.575053</td>
-      <td>-0.578590</td>
-      <td>-0.501939</td>
-      <td>-0.499914</td>
-      <td>-0.501266</td>
-      <td>2.010816</td>
-      <td>1.000299</td>
-      <td>-1.001572</td>
-      <td>-1.002353</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>-0.089945</td>
-      <td>-1.690423</td>
-      <td>-0.871303</td>
-      <td>1.062671</td>
-      <td>-1.317459</td>
-      <td>-0.450971</td>
-      <td>0.411960</td>
-      <td>1.216976</td>
-      <td>1.526687</td>
-      <td>0</td>
-      <td>...</td>
-      <td>-0.577143</td>
-      <td>-0.575053</td>
-      <td>1.728341</td>
-      <td>-0.501939</td>
-      <td>-0.499914</td>
-      <td>-0.501266</td>
-      <td>-0.497310</td>
-      <td>1.000299</td>
-      <td>-1.001572</td>
-      <td>0.997652</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>0.376731</td>
-      <td>-0.088741</td>
-      <td>0.254353</td>
-      <td>-1.165718</td>
-      <td>-0.691019</td>
-      <td>-0.104258</td>
-      <td>1.069988</td>
-      <td>0.520728</td>
-      <td>-1.531833</td>
-      <td>0</td>
-      <td>...</td>
-      <td>-0.577143</td>
-      <td>-0.575053</td>
-      <td>-0.578590</td>
-      <td>-0.501939</td>
-      <td>-0.499914</td>
-      <td>1.994948</td>
-      <td>-0.497310</td>
-      <td>1.000299</td>
-      <td>0.998430</td>
-      <td>0.997652</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>-0.819125</td>
-      <td>-1.207816</td>
-      <td>-0.990879</td>
-      <td>0.663322</td>
-      <td>0.777613</td>
-      <td>0.381141</td>
-      <td>1.102179</td>
-      <td>-0.871766</td>
-      <td>1.665711</td>
-      <td>0</td>
-      <td>...</td>
-      <td>-0.577143</td>
-      <td>-0.575053</td>
-      <td>1.728341</td>
-      <td>-0.501939</td>
-      <td>2.000344</td>
-      <td>-0.501266</td>
-      <td>-0.497310</td>
-      <td>1.000299</td>
-      <td>0.998430</td>
-      <td>0.997652</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>-0.089945</td>
-      <td>1.031143</td>
-      <td>0.412150</td>
-      <td>-0.037246</td>
-      <td>-0.928765</td>
-      <td>-0.312285</td>
-      <td>0.531014</td>
-      <td>-0.175519</td>
-      <td>-1.670857</td>
-      <td>0</td>
-      <td>...</td>
-      <td>-0.577143</td>
-      <td>1.738970</td>
-      <td>-0.578590</td>
-      <td>1.992275</td>
-      <td>-0.499914</td>
-      <td>-0.501266</td>
-      <td>-0.497310</td>
-      <td>-0.999701</td>
-      <td>-1.001572</td>
-      <td>-1.002353</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 29 columns</p>
-</div>
-```
-:::
-:::
-
-::: {.cell .markdown}
 Now, let\'s perform the same transformations (one-hot encoding and
 scaling) on the test data. We use the parameters (i.e., the category
 mapping for one-hot encoding and the mean and standard deviation for
 scaling) that we learned from the training data to transform the test
 data. This is to ensure that the same transformation is applied
 consistently across the training and test datasets.
-:::
 
-::: {.cell .code execution_count="13"}
 ``` python
 # One-hot encode the categorical variables in the test data
 test_encoded = ohe.transform(test_df[categorical_columns])
@@ -1034,183 +533,17 @@ test_data_encoded[numerical_columns] = scaler.transform(test_data_encoded[numeri
 test_data_encoded.head()
 ```
 
-::: {.output .execute_result execution_count="13"}
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+| AccountAge | MonthlyCharges | TotalCharges | ViewingHoursPerWeek | AverageViewingDuration | ContentDownloadsPerMonth | UserRating | SupportTicketsPerMonth | WatchlistSize | SubscriptionType_Premium | ... | DeviceRegistered_Mobile | DeviceRegistered_TV | DeviceRegistered_Tablet | GenrePreference_Comedy | GenrePreference_Drama | GenrePreference_Fantasy | GenrePreference_Sci-Fi | Gender_Male | ParentalControl_Yes | SubtitlesEnabled_Yes |
+|------------|----------------|--------------|---------------------|------------------------|---------------------------|------------|------------------------|---------------|--------------------------|-----|--------------------------|---------------------|------------------------|-----------------------|----------------------|-------------------------|-----------------------|-------------|----------------------|----------------------|
+| -0.644122  | 1.242876       | -0.137084    | 0.767017            | 0.594196               | 1.213252                  | 0.450126   | -0.871766              | 1.526687      | 1.420046                 | ... | -0.577143                | 1.738970            | -0.578590              | 1.992275              | -0.499914            | -0.501266               | -0.497310             | 1.000299    | -1.001572            | -1.002353            |
+| 0.493400   | -0.595673      | 0.023990     | 1.456060            | -0.696379              | 1.282595                  | -0.849307  | -0.871766              | 1.387664      | -0.704202                | ... | -0.577143                | 1.738970            | -0.578590              | -0.501939             | -0.499914            | -0.501266               | -0.497310             | -0.999701   | 0.998430             | -1.002353            |
+| -1.606640  | 0.584230       | -1.291688    | -1.147346           | 0.953367               | -0.728341                 | 1.561050   | -0.871766              | 1.387664      | -0.704202                | ... | -0.577143                | -0.575053           | -0.578590              | -0.501939             | -0.499914            | -0.501266               | 2.010816              | -0.999701   | -1.001572            | 0.997652             |
+| 0.814239   | 0.662424       | 1.148428     | 1.341570            | 1.677817               | -0.728341                 | 1.680308   | -1.568014              | 1.526687      | -0.704202                | ... | -0.577143                | -0.575053           | 1.728341               | 1.992275              | -0.499914            | -0.501266               | -0.497310             | -0.999701   | 0.998430             | 0.997652             |
+| 0.901741   | -0.019563      | 0.723051     | 0.266946            | -0.434722              | -1.283082                 | -0.134890  | 0.520728               | -1.670857      | -0.704202                | ... | -0.577143                | -0.575053           | 1.728341               | -0.501939             | 2.000344            | -0.501266               | -0.497310             | -0.999701   | -1.001572            | -1.002353            |
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>AccountAge</th>
-      <th>MonthlyCharges</th>
-      <th>TotalCharges</th>
-      <th>ViewingHoursPerWeek</th>
-      <th>AverageViewingDuration</th>
-      <th>ContentDownloadsPerMonth</th>
-      <th>UserRating</th>
-      <th>SupportTicketsPerMonth</th>
-      <th>WatchlistSize</th>
-      <th>SubscriptionType_Premium</th>
-      <th>...</th>
-      <th>DeviceRegistered_Mobile</th>
-      <th>DeviceRegistered_TV</th>
-      <th>DeviceRegistered_Tablet</th>
-      <th>GenrePreference_Comedy</th>
-      <th>GenrePreference_Drama</th>
-      <th>GenrePreference_Fantasy</th>
-      <th>GenrePreference_Sci-Fi</th>
-      <th>Gender_Male</th>
-      <th>ParentalControl_Yes</th>
-      <th>SubtitlesEnabled_Yes</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>-0.644122</td>
-      <td>1.242876</td>
-      <td>-0.137084</td>
-      <td>0.767017</td>
-      <td>0.594196</td>
-      <td>1.213252</td>
-      <td>0.450126</td>
-      <td>-0.871766</td>
-      <td>1.526687</td>
-      <td>1.420046</td>
-      <td>...</td>
-      <td>-0.577143</td>
-      <td>1.738970</td>
-      <td>-0.578590</td>
-      <td>1.992275</td>
-      <td>-0.499914</td>
-      <td>-0.501266</td>
-      <td>-0.497310</td>
-      <td>1.000299</td>
-      <td>-1.001572</td>
-      <td>-1.002353</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>0.493400</td>
-      <td>-0.595673</td>
-      <td>0.023990</td>
-      <td>1.456060</td>
-      <td>-0.696379</td>
-      <td>1.282595</td>
-      <td>-0.849307</td>
-      <td>-0.871766</td>
-      <td>1.387664</td>
-      <td>-0.704202</td>
-      <td>...</td>
-      <td>-0.577143</td>
-      <td>1.738970</td>
-      <td>-0.578590</td>
-      <td>-0.501939</td>
-      <td>-0.499914</td>
-      <td>-0.501266</td>
-      <td>-0.497310</td>
-      <td>-0.999701</td>
-      <td>0.998430</td>
-      <td>-1.002353</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>-1.606640</td>
-      <td>0.584230</td>
-      <td>-1.291688</td>
-      <td>-1.147346</td>
-      <td>0.953367</td>
-      <td>-0.728341</td>
-      <td>1.561050</td>
-      <td>-0.871766</td>
-      <td>1.387664</td>
-      <td>-0.704202</td>
-      <td>...</td>
-      <td>-0.577143</td>
-      <td>-0.575053</td>
-      <td>-0.578590</td>
-      <td>-0.501939</td>
-      <td>-0.499914</td>
-      <td>-0.501266</td>
-      <td>2.010816</td>
-      <td>-0.999701</td>
-      <td>-1.001572</td>
-      <td>0.997652</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>0.814239</td>
-      <td>0.662424</td>
-      <td>1.148428</td>
-      <td>1.341570</td>
-      <td>1.677817</td>
-      <td>-0.728341</td>
-      <td>1.680308</td>
-      <td>-1.568014</td>
-      <td>1.526687</td>
-      <td>-0.704202</td>
-      <td>...</td>
-      <td>-0.577143</td>
-      <td>-0.575053</td>
-      <td>1.728341</td>
-      <td>1.992275</td>
-      <td>-0.499914</td>
-      <td>-0.501266</td>
-      <td>-0.497310</td>
-      <td>-0.999701</td>
-      <td>0.998430</td>
-      <td>0.997652</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0.901741</td>
-      <td>-0.019563</td>
-      <td>0.723051</td>
-      <td>0.266946</td>
-      <td>-0.434722</td>
-      <td>-1.283082</td>
-      <td>-0.134890</td>
-      <td>0.520728</td>
-      <td>-1.670857</td>
-      <td>-0.704202</td>
-      <td>...</td>
-      <td>-0.577143</td>
-      <td>-0.575053</td>
-      <td>1.728341</td>
-      <td>-0.501939</td>
-      <td>2.000344</td>
-      <td>-0.501266</td>
-      <td>-0.497310</td>
-      <td>-0.999701</td>
-      <td>-1.001572</td>
-      <td>-1.002353</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 28 columns</p>
-</div>
-```
-:::
-:::
-
-::: {.cell .markdown}
 # Logistic Regression
-:::
 
-::: {.cell .code execution_count="14"}
 ``` python
 # Separate features and target from the training data
 X_train = train_data_encoded.drop('Churn', axis=1)
@@ -1237,7 +570,6 @@ plt.ylabel('Actual')
 plt.show()
 ```
 
-::: {.output .stream .stdout}
                   precision    recall  f1-score   support
 
                0       0.91      0.68      0.78    199605
@@ -1246,14 +578,10 @@ plt.show()
         accuracy                           0.68    243787
        macro avg       0.61      0.68      0.61    243787
     weighted avg       0.80      0.68      0.71    243787
-:::
 
-::: {.output .display_data}
+
 ![](vertopal_bad73b54b05e4bdcb74fd894d0d06097/cad508a102f80dc7acbcefa34f2f2a7e0ce05731.png)
-:::
-:::
 
-::: {.cell .markdown}
 From the classification report, we can see that the logistic regression
 model has a recall of 0.69 for the positive class (Churn = 1). Recall is
 a measure of a model\'s ability to find all the relevant cases within a
@@ -1279,9 +607,7 @@ churn, having a higher recall (even at the cost of precision) can be
 considered acceptable in this case. The company can then take action
 (such as offering discounts or improved services) to try to retain these
 customers.
-:::
 
-::: {.cell .code execution_count="15" scrolled="false"}
 ``` python
 ### PLEASE CHANGE THIS CODE TO IMPLEMENT YOUR OWN PREDICTIONS
 
@@ -1300,97 +626,25 @@ print(prediction_df.shape)
 prediction_df.head(10)
 ```
 
-::: {.output .stream .stdout}
-    (104480, 2)
-:::
+(104480, 2)
 
-::: {.output .execute_result execution_count="15"}
-```{=html}
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+| CustomerID  | predicted_probability |
+|-------------|-----------------------|
+| O1W6BHP6RM  | 0.348485              |
+| LFR4X92X8H  | 0.157539              |
+| QM5GBIYODA  | 0.758719              |
+| D9RXTK2K9F  | 0.172345              |
+| ENTCCHR1LR  | 0.411773              |
+| 7A88BB5IO6  | 0.799602              |
+| 70OMW9XEWR  | 0.383766              |
+| EL1RMFMPYL  | 0.650321              |
+| 4IA2QPT6ZK  | 0.534780              |
+| AEDCWHSJDN  | 0.499526              |
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>CustomerID</th>
-      <th>predicted_probability</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>O1W6BHP6RM</td>
-      <td>0.348485</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>LFR4X92X8H</td>
-      <td>0.157539</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>QM5GBIYODA</td>
-      <td>0.758719</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>D9RXTK2K9F</td>
-      <td>0.172345</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ENTCCHR1LR</td>
-      <td>0.411773</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>7A88BB5IO6</td>
-      <td>0.799602</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>70OMW9XEWR</td>
-      <td>0.383766</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>EL1RMFMPYL</td>
-      <td>0.650321</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>4IA2QPT6ZK</td>
-      <td>0.534780</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>AEDCWHSJDN</td>
-      <td>0.499526</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-```
-:::
-:::
 
-::: {.cell .markdown}
 **PLEASE CHANGE CODE ABOVE TO IMPLEMENT YOUR OWN PREDICTIONS**
-:::
 
-::: {.cell .markdown}
 ## Final Tests - **IMPORTANT** - the cells below must be run prior to submission
 
 Below are some tests to ensure your submission is in the correct format
@@ -1398,9 +652,7 @@ for autograding. The autograding process accepts a csv
 `prediction_submission.csv` which we will generate from our
 `prediction_df` below. Please run the tests below an ensure no assertion
 errors are thrown.
-:::
 
-::: {.cell .code execution_count="16"}
 ``` python
 # FINAL TEST CELLS - please make sure all of your code is above these test cells
 
@@ -1410,42 +662,32 @@ submission = pd.read_csv("prediction_submission.csv")
 
 assert isinstance(submission, pd.DataFrame), 'You should have a dataframe named prediction_df.'
 ```
-:::
 
-::: {.cell .code execution_count="17"}
 ``` python
 # FINAL TEST CELLS - please make sure all of your code is above these test cells
 
 assert submission.columns[0] == 'CustomerID', 'The first column name should be CustomerID.'
 assert submission.columns[1] == 'predicted_probability', 'The second column name should be predicted_probability.'
 ```
-:::
 
-::: {.cell .code execution_count="18"}
 ``` python
 # FINAL TEST CELLS - please make sure all of your code is above these test cells
 
 assert submission.shape[0] == 104480, 'The dataframe prediction_df should have 104480 rows.'
 ```
-:::
 
-::: {.cell .code execution_count="19"}
 ``` python
 # FINAL TEST CELLS - please make sure all of your code is above these test cells
 
 assert submission.shape[1] == 2, 'The dataframe prediction_df should have 2 columns.'
 ```
-:::
 
-::: {.cell .code execution_count="20"}
 ``` python
 # FINAL TEST CELLS - please make sure all of your code is above these test cells
 
 ## This cell calculates the auc score and is hidden. Submit Assignment to see AUC score.
 ```
-:::
 
-::: {.cell .markdown}
 ## SUBMIT YOUR WORK!
 
 Once we are happy with our `prediction_df` and
@@ -1453,4 +695,3 @@ Once we are happy with our `prediction_df` and
 using the blue **Submit Assignment** at the top of your notebook. Don\'t
 worry if your initial submission isn\'t perfect as you have multiple
 submission attempts and will obtain some feedback after each submission!
-:::
